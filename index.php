@@ -1493,12 +1493,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                        <?php echo ($values['gender'] ?? '') === 'female' ? 'checked' : ''; ?>>
                 <label class="form-check-label" for="female">Женский</label>
             </div>
-            <div class="form-check">
-                <input class="form-check-input <?php echo !empty($errors['gender']) ? 'is-invalid' : ''; ?>" 
-                       type="radio" name="gender" id="other" value="other"
-                       <?php echo ($values['gender'] ?? '') === 'other' ? 'checked' : ''; ?>>
-                <label class="form-check-label" for="other">Другое</label>
-            </div>
             <?php if (!empty($errors['gender'])): ?>
                 <div class="invalid-feedback d-block"><?php echo htmlspecialchars($errors['gender']); ?></div>
             <?php endif; ?>
