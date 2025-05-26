@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 phone VARCHAR(20) NOT NULL,
                 email VARCHAR(100) NOT NULL,
                 birthdate DATE NOT NULL,
-                gender ENUM('male','female','other') NOT NULL,
+                gender ENUM('male','female') NOT NULL,
                 bio TEXT,
                 contract_accepted BOOLEAN NOT NULL DEFAULT FALSE,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             'message' => 'Дата должна быть в формате ГГГГ-ММ-ДД'
         ],
         'gender' => [
-            'pattern' => '/^(male|female|other)$/',
+            'pattern' => '/^(male|female)$/',
             'message' => 'Выберите пол из предложенных вариантов'
         ],
         'languages' => [
