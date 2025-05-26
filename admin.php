@@ -197,7 +197,6 @@ if ($action === 'edit' && $id) {
                             <select name="gender" class="form-control" required>
                                 <option value="male" <?= $edit_data['gender'] === 'male' ? 'selected' : '' ?>>Мужской</option>
                                 <option value="female" <?= $edit_data['gender'] === 'female' ? 'selected' : '' ?>>Женский</option>
-                                <option value="other" <?= $edit_data['gender'] === 'other' ? 'selected' : '' ?>>Другое</option>
                             </select>
                         </div>
                         
